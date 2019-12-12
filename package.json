@@ -1,0 +1,11 @@
+{
+  "name": "notify-errors",
+  "version": "1.0.0",
+  "description": "Notificação de error criado pelo esquadrão de contabilidade",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "Victor Camara",
+  "license": "ISC"
+}
