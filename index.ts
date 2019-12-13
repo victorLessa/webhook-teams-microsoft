@@ -1,21 +1,30 @@
 import { cardModel, messageModel } from './object-card'
-import Axios, { AxiosInstance } from 'axios'
+import Axios, {AxiosInstance} from 'axios'
 
 class NotifyError {
 
   private _axios:AxiosInstance
 
-  constructor(options: {url: string}) {
+  constructor(private options:{ url:string }) {
+
+    if(!options.url) 
+      throw new Error('Insira objeto de configuração do Webhook ex: { url: "***" }')
+    
     this._axios = Axios.create({
       baseURL: options.url
     })
+
   }
 
   async sendRequest(data:object) {
-    await this._axios.request({
-      method: 'post',
-      data
-    })
+    try {
+      await this._axios.request({
+        method: 'post',
+        data
+      })
+    } catch(error) {
+      throw new Error(error)
+    }
   }
 
   async notifyCard(error:any) {
@@ -29,4 +38,6 @@ class NotifyError {
 }
 
 
-export default NotifyError
+let instance = new NotifyError({url:'yrfd'})
+
+console.log(instance)

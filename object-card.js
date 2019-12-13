@@ -1,4 +1,4 @@
-export const cardModel = ({ name }) => {
+module.exports.cardModel = ({ name }) => {
   return {
     "@type": "MessageCard",
     "@context": "http://schema.org/extensions",
@@ -75,7 +75,7 @@ export const cardModel = ({ name }) => {
   }
 }
 
-export const messageModel = (text) => {
+module.exports.messageModel = (text) => {
   return {
     "type": "message",
     "text": JSON.stringify(text)
