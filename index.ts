@@ -3,16 +3,16 @@ import Axios, { AxiosInstance } from 'axios'
 
 class NotifyError {
 
-  static axios:AxiosInstance
+  private _axios:AxiosInstance
 
   constructor(options: {url: string}) {
-    NotifyError.axios = Axios.create({
+    this._axios = Axios.create({
       baseURL: options.url
     })
   }
 
   async sendRequest(data:object) {
-    await NotifyError.axios.request({
+    await this._axios.request({
       method: 'post',
       data
     })
@@ -27,5 +27,6 @@ class NotifyError {
   }
 
 }
+
 
 export default NotifyError
