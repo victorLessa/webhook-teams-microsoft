@@ -27,7 +27,7 @@ class NotifyError {
     }
   }
 
-  async notifyCard(error:any) {
+  async notifyCard(error:object) {
     await this.sendRequest(cardModel(error))
   }
 

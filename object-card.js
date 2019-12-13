@@ -1,4 +1,4 @@
-module.exports.cardModel = ({ name }) => {
+module.exports.cardModel = (name) => {
   return {
     "@type": "MessageCard",
     "@context": "http://schema.org/extensions",

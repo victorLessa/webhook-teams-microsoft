@@ -35,15 +35,18 @@ var __generator = (this && this.__generator) || function (thisArg, body) {
         if (op[0] & 5) throw op[1]; return { value: op[0] ? op[1] : void 0, done: true };
     }
 };
-exports.__esModule = true;
+var __importDefault = (this && this.__importDefault) || function (mod) {
+    return (mod && mod.__esModule) ? mod : { "default": mod };
+};
+Object.defineProperty(exports, "__esModule", { value: true });
 var object_card_1 = require("./object-card");
-var axios_1 = require("axios");
+var axios_1 = __importDefault(require("axios"));
 var NotifyError = /** @class */ (function () {
     function NotifyError(options) {
         this.options = options;
         if (!options.url)
             throw new Error('Insira objeto de configuração do Webhook ex: { url: "***" }');
-        this._axios = axios_1["default"].create({
+        this._axios = axios_1.default.create({
             baseURL: options.url
         });
     }
