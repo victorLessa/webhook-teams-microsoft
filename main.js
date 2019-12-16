@@ -2,7 +2,7 @@
 
 const Notify = require('./lib/index')
 
-let Instance = Notify({url: 'https://outlook.office.com/webhook/37599f65-a861-4e92-967e-8c0344e66e98@3e3b727e-1a2f-4771-8553-f7dfb8aaeda5/IncomingWebhook/af3ffd11493143d6a5bfd8e03b6532b2/d83ef4ee-7c6e-463e-9f1f-bf90682d77d5'})
+let Instance = Notify({url: 'https://outlook.office.com/webhook/8a045287-a3ef-4475-bfa7-4c98b0ff0582@1384a791-5f3c-46c2-8b96-437e4cd317ca/IncomingWebhook/60307c6e52304664a30b64b35e98818b/f4764a40-b8a7-497c-98bc-69aa17bd17f8'})
 
 Instance.notifyText({ message: 'Erro test', status: 401 }, 'metodo de teste', 'Brasilcap')
   .then(result => console.log('success', result.data))
