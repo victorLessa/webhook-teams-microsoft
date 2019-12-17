@@ -1,6 +1,6 @@
 {
   "name": "bbcap-notify-error",
-  "version": "1.0.30",
+  "version": "1.0.31",
   "description": "Notificação de error criado pelo esquadrão de contabilidade",
   "main": "lib/index.js",
   "scripts": {
