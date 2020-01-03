@@ -10,7 +10,7 @@
       "name": "Launch Program",
       "program": "${workspaceFolder}/main.js",
       // "envFile": "${workspaceFolder}/.env",
-      "runtimeVersion": "6.10.3"
+      "runtimeVersion": "12.13.1"
     }
   ]
 }
